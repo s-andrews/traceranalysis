@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     function doTracerAnalysis(callback) {
         formData = $('#tracerForm').serialize()
-        $.post('/api/tracer', formData).done(function(data) {
+        $.post('api/tracer', formData).done(function(data) {
             try {
                 var arrays = JSON.parse(data);
 
