@@ -3,7 +3,7 @@ $(document).ready(function() {
     var cachedUnlabeled = null;
 
     function showAlert() {
-        alert('Something went wrong! Check your data. If you cannot fix the problem contact sjt65+fluxfix@drexel.edu with the data you tried to use.');
+        alert('Something went wrong! Check your data. If you cannot fix the problem contact sophie.trefely@babraham.ac.uk with the data you tried to use.');
     }
 
     // google 'check number javascript'
