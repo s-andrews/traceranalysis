@@ -3,7 +3,7 @@ import json
 sys.stdout = sys.stderr
 
 from flask import Flask, request
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="")
 app.debug = True
 
 from tracerutils import (
@@ -11,7 +11,12 @@ from tracerutils import (
     prepare_data_for_analysis,
     prepare_unlabeled_for_analysis
 )
-    
+
+
+@app.route("/")
+def root():
+    return app.send_static_file("index.html")
+
 @app.route('/api/ping')
 def hello_world():
     return '{"ping": "OK"}'
